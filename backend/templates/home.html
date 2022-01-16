@@ -1,0 +1,19 @@
+<!-- templates/home.html -->
+
+    {% extends 'base.html' %}
+    {% block title %} Home {% endblock %}
+    {% block content %}
+    <div class="row">
+        <div class="col-sm-12 mb-3">
+            <h4 class="text-center"> Welcome {{ user.username }} </h4>
+        </div>
+    </div>
+
+    {% for el in products %}
+        <h3> {{ el.name }}</h3>
+        <h3> {{ el.type }}</h3>
+        <h3> {{ el.data_delivery }}</h3>
+        <h3> {{ el.points_of_issue }}</h3>
+    {% endfor %}
+
+    {% endblock %}
